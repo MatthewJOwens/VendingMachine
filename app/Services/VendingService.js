@@ -21,7 +21,7 @@ export default class VendingService {
     console.log("buying from Service");
 
     let item = _store.State.items.find(x => x.id == newItem)
-    if (_store.State.cash > item.price) {
+    if (_store.State.cash > item.price && item.amount > 0) {
       _store.State.cash -= item.price
       item.amount--
       _store.State.cart = item.name
