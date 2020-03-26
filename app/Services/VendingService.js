@@ -13,6 +13,10 @@ export default class VendingService {
   get Items() {
     return _store.State.items.map(item => new VendItem(item))
   }
+
+  get Cart() {
+    return _store.State.cart
+  }
   buyItem(newItem) {
     console.log("buying from Service");
 
@@ -20,7 +24,7 @@ export default class VendingService {
     if (_store.State.cash > item.price) {
       _store.State.cash -= item.price
       item.amount--
-      _store.State.cart.push(item)
+      _store.State.cart = item.name
     }
   }
 

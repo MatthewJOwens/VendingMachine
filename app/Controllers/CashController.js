@@ -3,6 +3,7 @@ import _store from '../store.js'
 
 
 function _drawCash() {
+  document.getElementById("money").innerText = '$' + _store.State.cash.toFixed(2)
 
 }
 
@@ -16,6 +17,7 @@ export default class CashController {
 
   addCash() {
     _cashService.addCash()
+    _drawCash()
   }
 }
 

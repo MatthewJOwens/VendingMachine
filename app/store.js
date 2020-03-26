@@ -6,6 +6,7 @@ let _state = {
   /** @type {Value[]} */
   values: [],
   cash: 100.00,
+  /**@type {VendItem[]} */
   cart: [],
   /**@type {VendItem[]} */
   items: [

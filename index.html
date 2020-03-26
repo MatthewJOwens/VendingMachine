@@ -26,12 +26,8 @@
                     <div class="card-header bg-primary text-light">
                         <h2>Vendrrr Machine</h2>
                     </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item" id="vend-item"> *insert code to pull avilable items template. probs
-                            need to give
-                            this line an ID or specific name
-                        </li>
-                    </ul>
+                    <div class="list-group-item" id="vend-item">
+                    </div>
                 </div>
             </div>
             <!-- list of items we can buy, each is a small col-12 clickable, inside will have name of item, description, price & quanity -->
@@ -46,7 +42,8 @@
                         <li class="list-group-item">Total Money: <span id="money">$0.00</span> <button
                                 class="btn btn-outline-success shadow" onclick="app.cashController.addCash()">Add
                                 Quarter</button></li>
-                        <li class="list-group-item">Purchased Items:
+                        <li class="list-group-item">Last Purchase:
+                            <div id="cart-item"></div>
                             <!-- insert list of items purchased here -->
                         </li>
                     </ul>
