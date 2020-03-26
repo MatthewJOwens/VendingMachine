@@ -3,17 +3,69 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/style.css">
-    <title>vendingmachine</title>
+    <title>Vending Machine</title>
 </head>
 
 <body>
+    <div class="container-fluid">
+        <div class="row d-flex">
+            <div class="col-12 text-center bg-dark text-light mb-5">
+                <h1>VENDRRR MOCKUP</h1>
+            </div>
+        </div>
+        <div class="row">
+            <!-- left column w machine -->
+            <div class="col-md-6 col-12 d-flex">
+                <div class="card shadow" style="width: 18rem;">
+                    <div class="card-header bg-primary text-light">
+                        <h2>Vendrrr Machine</h2>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item" id="vend-item"> *insert code to pull avilable items template. probs
+                            need to give
+                            this line an ID or specific name
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- list of items we can buy, each is a small col-12 clickable, inside will have name of item, description, price & quanity -->
+            <!-- all of which will be dynamic loading -->
+            <!-- right column with purchased items & money -->
+            <div class="col-md-6 col-12 d-flex">
+                <div class="card shadow" style="width: 18rem;">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item bg-secondary text-light text-center">
+                            <h4>INVENTORY</h4>
+                        </li>
+                        <li class="list-group-item">Total Money: <span id="money">$0.00</span> <button
+                                class="btn btn-outline-success shadow" onclick="app.cashController.addCash()">Add
+                                Quarter</button></li>
+                        <li class="list-group-item">Purchased Items:
+                            <!-- insert list of items purchased here -->
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <h1>Hello vendingmachine</h1>
-
-
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
     <script src="app/main.js" type="module"></script>
 </body>
 
