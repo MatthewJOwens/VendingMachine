@@ -3,7 +3,9 @@ import Value from "./Models/Value.js";
 let _state = {
   activeValue: new Value({ title: "Value" }),
   /** @type {Value[]} */
-  values: []
+  values: [],
+  cash: 100.00,
+  cart: []
 };
 
 class Store {
